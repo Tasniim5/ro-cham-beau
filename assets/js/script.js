@@ -189,7 +189,6 @@ function beatText(userChoice, computerChoice) {
         }
     }
 
-
     resultMessage.innerText = beatContext;
 }
 

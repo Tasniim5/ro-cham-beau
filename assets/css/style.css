@@ -7,6 +7,15 @@ header > h1 {
     text-align: center;
 }
 
+.toggle-area {
+    margin: auto;
+    text-align: center;
+}
+
+.game-toggle {
+    display: inline-block;
+}
+
 .game-area {
     margin: auto auto;
 }
