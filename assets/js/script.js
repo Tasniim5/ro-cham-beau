@@ -13,8 +13,6 @@ var computerChoice = "";
 
 var userWin = false;
 
-var beatContext = "";
-
 // --------------------------------------------  Event listeners
 rock_div.addEventListener("click", function () {
     getUserChoice("rock");
@@ -71,7 +69,7 @@ function iWin() {
     // Nicked this bit off Love Maths to increase score
     addUserScore();
 
-    beatText();
+    beatText(userChoice, computerChoice);
 }
 
 function iLose() {
@@ -80,11 +78,14 @@ function iLose() {
 
     addComputerScore();
 
-    beatText();
+    beatText(userChoice, computerChoice);
 }
 
 function iDraw() {
+    userWin = false;
     console.log("No winners...");
+
+    beatText(userChoice, computerChoice);
 }
 
 function gameLogic() {
@@ -118,6 +119,7 @@ function gameLogic() {
 
 // --------------------------------------------  Change text based off context
 function beatText(userChoice, computerChoice) {
+    let beatContext = "";
     // User wins
     if (userWin) {
         console.log("userWin = " + userWin);
@@ -131,7 +133,8 @@ function beatText(userChoice, computerChoice) {
         console.log("userWin = " + userWin);
     }
 
-    resultMessage.innerText = beatContext;
+
+    resultMessage.innerHTML = beatContext;
 }
 
 
