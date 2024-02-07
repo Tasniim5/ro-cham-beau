@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <title>ROCHAMBEAU</title>
+</head>
+<body>
+    <header><h1>ROCHAMBEAU</h1></header>
+
+    <div class="toggle-area">
+        <div class="game-toggle"><button game-type="of3">Best of 3</button></div>
+        <div class="game-toggle"><button game-type="of5">Best of 5</button></div>
+        <div class="game-toggle"><button game-type="of10">Best of 10</button></div>
+    </div>
+
+    <div class="game-area">
+        <div class="choice-area">
+            <div class="choice" id="rock"><button><i class="fa-solid fa-hand-back-fist"></i></button></div>
+            <div class="choice" id="paper"><button><i class="fa-solid fa-hand"></i></button></div>
+            <div class="choice" id="scissors"><button><i class="fa-solid fa-hand-scissors"></i></button></div>
+            <div class="choice" id="lizard"><button><i class="fa-solid fa-hand-lizard"></i></button></div>
+            <div class="choice" id="spock"><button><i class="fa-solid fa-hand-spock"></i></button></div>
+        </div>
+
+        <div class="score-area">
+            <div class="round-result">
+                <p id="user-choice"></p>
+                <p id="computer-choice"></p>
+                <p id="result-message"></p>
+                <p id="win-lose-message"></p>
+            </div>
+
+            <div class="score-track">
+                <p class="scores">Player <span id="player-win">0</span></p>
+                <p class="scores">Computer <span id="computer-win">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/b562b51125.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
