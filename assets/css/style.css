@@ -1,3 +1,5 @@
+/*main*/
+/*Stlyes to the rules page*/
 /* Styles for the rules page */
 * {
     padding: 0;
@@ -74,21 +76,10 @@
         margin-bottom: -20px;
     }
     .split-container img {
-        flex: 0 0 50%;
-        max-height: 70vh;
-        height: auto;
-        margin-top: 100px;
-        
+        max-width: 100%;
+        max-height: 550px;
+        margin-top: 50px;
     }
+    /*End*/
 
-    .instructions{
-        min-height: 100vh;
-        background-color: #f4f4f4;
-        color: #a2a2a2;
-    
-    }
-    .btn.btn-primary {
-        margin-top: -20px;
-    }
-    
 }
