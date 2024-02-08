@@ -37,27 +37,28 @@ The inclusion of a basic mode of Rock Paper Scissors in the game serves as a nos
 
 ### Rock Paper Scissors, Spock, Lizard Mode
 
-The advanced mode of Rock Paper Scissors Lizard Spock was included in the game to add a fresh twist and challenge for players looking for a more complex and strategic gameplay experience. This expanded version introduces additional gestures and rules that create new layers of depth and excitement, appealing to users who seek a deeper level of engagement and skill development. By incorporating the Lizard Spock variant, the game offers a dynamic and innovative twist on the traditional Rock Paper Scissors format, providing a stimulating and stimulating option for those looking to test their strategic thinking and decision-making abilities.
+The advanced mode of Rock Paper Scissors Lizard Spock was included in the game to add a fresh twist and challenge for players looking for a more complex and strategic gameplay experience. This expanded version introduces additional gestures and rules that create new layers of depth and excitement, appealing to users who seek a deeper level of engagement and skill development. By incorporating the Lizard Spock variant, the game offers a dynamic and innovative twist on the traditional Rock Paper Scissors format, providing a stimulating option for those looking to test their strategic thinking and decision-making abilities.
 
 ### Best of 3
 
-The inclusion of a "Best of 3" mode in the game adds an element of suspense and competitiveness for players by allowing them to engage in a series of rounds to determine the ultimate winner. This mode not only provides a quick and concise gameplay experience, but it also provides more opportunities for players to strategize and adapt their tactics, but also adds a sense of progression and accomplishment as they strive to come out on top over multiple rounds. By incorporating a "Best of 3" mode, the game offers a structured and engaging format that enhances the overall enjoyment and satisfaction of players seeking a more challenging and rewarding experience where they can move onto more difficult modes.
+The inclusion of a "Best of 3" mode in the game adds an element of suspense and competitiveness for players by allowing them to engage in a series of rounds to determine the ultimate winner. This mode not only provides a quick and concise gameplay experience, but it also provides more opportunities for players to strategize and adapt their tactics, but also adds a sense of progression and accomplishment as they strive to come out on top over multiple rounds. By incorporating a "Best of 3" mode, the game offers a structured and engaging format that enhances the overall enjoyment and satisfaction of players seeking a more challenging and rewarding experience where they can move onto more difficult modes if they wish.
 
 ### Best of 5 
 
-The inclusion of a "Best of 5" mode in the game serves to further enhance the competitive nature of gameplay by providing an even more robust and challenging experience. This mode allows players to engage in a series of matches that require them to demonstrate consistency, adaptability, and resilience over a longer period of time. By requiring players to win the majority of five rounds, the "Best of 5" mode intensifies the strategic depth of gameplay, as individuals must carefully plan their moves and anticipate their opponent's actions throughout the extended series. Ultimately, the inclusion of a "Best of 5" mode enriches the gameplay experience by rewarding players who can maintain their focus and skill level over a more demanding and high-stakes competition.
+The inclusion of a "Best of 5" mode in the game serves to further enhance the competitive nature of gameplay by providing an even more robust and challenging experience. This mode allows players to engage in a series of matches that require them to demonstrate consistency, adaptability, and resilience over a longer period of time. By requiring players to win the majority of five rounds, the "Best of 5" mode intensifies the strategic depth of gameplay, as individuals must carefully plan their moves and anticipate their opponent's actions throughout the extended series. Ultimately, the inclusion of a "Best of 5" mode enriches the gameplay experience by rewarding players who can maintain their focus and skill level over a more demanding and higher stakes competition.
 
 ### Best of 10 
 
-The addition of a "Best of 10" mode in the game offers players an even more in-depth and comprehensive gameplay experience. By extending the series to ten rounds, this mode presents a significant challenge for those seeking a prolonged and intense competition. Players must showcase their skills, endurance, and ability to adapt and strategize over an extended period, creating a more immersive and strategic gameplay environment. The "Best of 10" mode allows for a deeper exploration of tactics, counterplay, and player skill, as individuals vie for victory by consistently outperforming their opponents across a substantial and demanding series of matches. Overall, the inclusion of a "Best of 10" mode enriches the gameplay experience by providing a high-level, competitive setting for players looking for a more extensive and challenging test of their abilities.
+The addition of a "Best of 10" mode in the game offers players an even more in-depth and comprehensive gameplay experience. By extending the series to ten rounds, this mode presents a significant challenge for those seeking a prolonged and intense competition. Players must showcase their skills, endurance, and ability to adapt and strategize over an extended period of time, creating a more immersive and strategic gameplay environment. The "Best of 10" mode allows for a deeper exploration of tactics, counterplay, and player skill, as individuals battle for victory by consistently outperforming the computer across a substantial and demanding series of matches. Overall, the inclusion of a "Best of 10" mode enriches the gameplay experience by providing a high-level, competitive setting for players looking for a more extensive and challenging test.
 
 ### Rules 
 
-The incorporation of clear and accessible rules within the game serves to establish a level playing field and ensure that all players understand and adhere to the same set of guidelines. By outlining the rules within the game, developers can help facilitate a fair and competitive gaming environment where participants can engage with one another in a structured and informed manner. These rules can cover a wide range of aspects, such as gameplay mechanics, scoring systems, prohibited behaviors, and guidelines for resolving disputes, all of which contribute to promoting a positive and enjoyable experience for all players. Additionally, having the rules readily available within the game can help new players quickly grasp the fundamentals and start participating confidently, thus fostering a welcoming and inclusive community around the game. Ultimately, the inclusion of clear rules in the game serves to promote fairness, sportsmanship, and overall enjoyment for all individuals involved.
+The incorporation of clear and accessible rules within the game serves to establish a level playing field and ensure that all players understand and adhere to the same set of guidelines. By outlining the rules within the game, we can help facilitate a fair and competitive gaming environment where participants can engage with the computer in a structured and informed manner. These rules can cover a wide range of aspects, such as gameplay mechanics and scoring systems, all of which contribute to promoting a positive and enjoyable experience for all players. Additionally, having the rules readily available within the game can help new players quickly grasp the fundamentals and start participating confidently, thus fostering a welcoming and inclusive community around the game. Ultimately, the inclusion of clear rules in the game serves to promote fairness, sportsmanship, and overall enjoyment for all individuals who wish to play.
 
 ### Features Left to Implement
 
-Multiple player mode, whereby users are able to play against another user via share code. Instead of player vs computer mode.
+-Multiple player mode, whereby users are able to play against another user via share code. Instead of player vs computer mode.
+-Timer function (Beat the clock)
 
 ## Wireframes
 
@@ -72,6 +73,7 @@ Multiple player mode, whereby users are able to play against another user via sh
     - [Gitpod](https://www.gitpod.io/) - Used for writing and collaborating on code for the project.
     - [Github Projects](https://github.com/users/Tasniim5/projects/2) - Used projects for our Kanban board to track project progress and monitor project tasks. 
     - [Balsamiq](https://balsamiq.cloud/skblczi/projects) Used to create Wireframes.
+    - [Bootstrap](https://getbootstrap.com/) Used to create responsive and visually appealing website with pre-designed components for faster development.
 
 
 ## User Stories
@@ -84,33 +86,21 @@ Multiple player mode, whereby users are able to play against another user via sh
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The team has thoroughly tested ROCHAMBEAU to ensure each feature works responsively. This includes user interactions, game logic, and interface responsiveness. We are confident the project meets the requirements by providing an enjoyable gaming experience with seamless functionality for users to play and achieve their goal of having fun while engaging with the game.
+ROCHAMBEAU looks and feels like a familiar game, it truly embodies that element of nostalgia by intentionally designing the website in that minimal aesthetic. ROCHAMBEAU is compatible with all devices, it was tested on various screen sizes, including a mobile phone device. 
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+### Validator Testing
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-Validator Testing
-
-### HTML
+### -HTML
 No errors were returned when passing through the official W3C validator
-### CSS
+### -CSS
 No errors were found when passing through the official (Jigsaw) validator
-### JavaScript
+### -JavaScript
 
 You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 ## Deployment
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
-
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, select the Master Branch
-Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html
+This site was successfully on GitHub pages by following these steps: Firstly, selecting the Settings tab in the GitHub repository, then selecting the Master Branch from the source menu, and saw the page refresh with a ribbon indicating the deployment was successful. You can access the live link at https://code-institute-org.github.io/love-running-2.0/index.html.
 
 ## Credits
 
