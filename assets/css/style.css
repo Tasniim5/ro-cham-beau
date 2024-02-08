@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+/*Rules Page*/
+/*main*/
+/*Stlyes to the rules page*/
+=======
+/* Landing Page */
+/* Navigation Bar */
+.topnav {
+    background-color: #B8B8B8;
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.search {position:absolute;
+    right: 0%;
+    margin-top: 20px;
+   float: center;
+}
+
+  /* Main */
+>>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
+.header {
+    text-align: center;
+}
+
+<<<<<<< HEAD
+=======
+.hero {text-align: center;}
+
+/* Landing Page End*/
+
 /*Rules Page*/
 /*main*/
 /*Stlyes to the rules page*/
@@ -5,6 +49,7 @@
     text-align: center;
 }
 
+>>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
 .how-to-play h4 {
     font-weight: bold;
 }
@@ -69,9 +114,19 @@
         max-height: 550px;
         margin-top: 50px;
     }
+<<<<<<< HEAD
 }
     /*End*/
 /*Rules Page End*/
+=======
+    /*End*/
+/*Rules Page End*/
+=======
+* {
+    margin: 0;
+    padding: 0;
+}
+>>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
 
 header > h1 {
     text-align: center;
@@ -108,5 +163,11 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
+<<<<<<< HEAD
     font-size: 2rem; }
 /*main*/
+=======
+    font-size: 2rem;
+/*main*/
+}
+>>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
