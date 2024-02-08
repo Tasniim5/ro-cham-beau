@@ -6,43 +6,48 @@
     margin: -8px;
   }
 
-  .topnav a {
+.topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
 
-  .topnav a:hover {
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
 
-.search {position:absolute;
+.search {
+    position: absolute;
     right: 0%;
     margin-top: 20px;
+    float: center;
    float: center;
    margin-right: 20px;
-
 }
 
-  /* Main */
+/* Main */
 .header {
-text-align: center;
-margin-bottom: 100px;}
+    text-align: center;
+    margin-bottom: 100px;
+}
 
 .option1 {
-  text-align:center;
-  margin-bottom: 70px;}
-
-.option2 {
-  text-align: center;
-  margin-bottom: 70px;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-.hero {text-align: center;}
+.option2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.hero {
+    text-align: center;
+}
 
 /*Footer*/
 
@@ -118,6 +123,11 @@ margin-bottom: 100px;}
 
 /* Responsive styles */
 @media (max-width: 760px) {
+<<<<<<< HEAD
+=======
+
+    /*Stlyes to the rules page*/
+>>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
     .split-container {
         flex-direction: column;
     }
@@ -133,6 +143,11 @@ margin-bottom: 100px;}
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
+<<<<<<< HEAD
+=======
+
+    /*Stlyes to the rules page*/
+>>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
     .header {
         align-items: center;
         margin-top: 20px;
@@ -143,6 +158,11 @@ margin-bottom: 100px;}
         max-height: 550px;
         margin-top: 50px;
     }
+
+
+    /*End*/
+}
+
     /*End*/
 
 /*Rules Page End*/
@@ -187,6 +207,10 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
+<<<<<<< HEAD
     font-size: 2rem;}
 /*main*/
 }
+=======
+    font-size: 2rem; } }
+>>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
