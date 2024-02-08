@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #a2a2a2;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: background 0.1s, color 0.1s;
+    background: linear-gradient(145deg, #ffffff, #dcdcdc);
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.tab:hover {
+    background: linear-gradient(145deg, #f4f4f4, #cecece);
+    color: #888;
+}
+
+.tab.active {
+    background-color: #f4f4f4;
+    color: #bdbdbd;
+    cursor: default;
+    box-shadow: inset 3px 3px 5px #cbcbcb, inset -3px -3px 5px #ffffff;
+}
