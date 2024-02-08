@@ -3,6 +3,7 @@
 .topnav {
     background-color: #B8B8B8;
     overflow: hidden;
+    margin: -8px;
   }
 
   .topnav a {
@@ -23,19 +24,41 @@
     right: 0%;
     margin-top: 20px;
    float: center;
+   margin-right: 20px;
+
 }
 
   /* Main */
->>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
 .header {
-    text-align: center;
+text-align: center;
+margin-bottom: 100px;}
+
+.option1 {
+  text-align:center;
+  margin-bottom: 70px;}
+
+.option2 {
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-<<<<<<< HEAD
-=======
 .hero {text-align: center;}
 
+/*Footer*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #B8B8B8;
+  color: black;
+  text-align: center;
+}
+
+
 /* Landing Page End*/
+
 
 /*Rules Page*/
 /*main*/
@@ -110,7 +133,7 @@
     }
     /*End*/
 /*Rules Page End*/
-=======
+
 * {
     margin: 0;
     padding: 0;
@@ -151,6 +174,4 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
-    font-size: 2rem;
-/*main*/
-}
+    font-size: 2rem; } }
