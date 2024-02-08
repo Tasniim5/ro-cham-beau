@@ -4,7 +4,7 @@
     background-color: #B8B8B8;
     overflow: hidden;
     margin: -8px;
-  }
+}
 
 .topnav a {
     float: left;
@@ -22,17 +22,34 @@
 
 .search {
     position: absolute;
-    right: 0%;
-    margin-top: 20px;
-    float: center;
-   float: center;
-   margin-right: 20px;
+    right: 20px;
+    margin-top: 12px;
+    line-height: normal;
+    display: inline-block;
+
+}
+button {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.1s, color 0.1s;
+    background: linear-gradient(145deg, #ffffff, #dcdcdc);
+    box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+    padding: 15px 20px;
+    max-width: fit-content;
+    min-height: 50px;
+    position: static;
 }
 
 /* Main */
 .header {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+h2 {
+   margin-bottom: 30px; /* Add space below the h2 */
 }
 
 .option1 {
@@ -47,20 +64,36 @@
 
 .hero {
     text-align: center;
+    
+}
+.hero img{
+    max-width: 100%;
+    height: auto;
 }
 
-/*Footer*/
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #B8B8B8;
-  color: black;
-  text-align: center;
+/*footer */
+footer {
+    overflow: hidden;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    font-size: 20px;
+
 }
 
+footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer p {
+    margin-top: 10;
+    margin-bottom: -10px;
+
+}
+
+/*footer*/
 
 /* Landing Page End*/
 
@@ -72,16 +105,17 @@
     padding: 0;
     box-sizing: border-box;
     color: black;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .header {
     text-align: center;
-    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .how-to-play h4 {
     font-weight: bold;
 }
+
 .how-to-play p {
     text-wrap: wrap;
 }
@@ -89,7 +123,8 @@
 .how-to-play {
     margin-top: 50px;
 }
-.instructions{
+
+.instructions {
     min-height: 100vh;
     background-color: #f4f4f4;
     color: #a2a2a2;
@@ -118,6 +153,7 @@
 
 .btn.btn-primary {
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 /* Responsive styles */
@@ -140,7 +176,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
-
     /*Stlyes to the rules page*/
 
     .header {
@@ -148,53 +183,12 @@
         margin-top: 20px;
         margin-bottom: -20px;
     }
+
     .split-container img {
         max-width: 100%;
         max-height: 550px;
         margin-top: 50px;
     }
 }
+
 /*Rules Page End*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-header > h1 {
-    text-align: center;
-}
-
-.toggle-area {
-    margin: auto;
-    text-align: center;
-}
-
-.game-toggle {
-    display: inline-block;
-}
-
-.game-area {
-    margin: auto auto;
-}
-
-.choice-area {
-    text-align: center;
-}
-
-.choice {
-    display:inline-block;
-}
-
-.score-area {
-    text-align: center;
-}
-
-.choice {
-    margin: 10px;
-}
-
-.choice button {
-    padding: 10px 30px;
-    font-size: 2rem;}
-/*main*/

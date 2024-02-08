@@ -12,50 +12,43 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>ROCHAMBEAU</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css game/style.css">
+    <link rel="stylesheet" href="assets/css/gameStyle.css">
 </head>
 
 <body>
+    <div class="topnav" style="border: 5px solid black;">
+        <a href="#back"><i class="fa fa-fw fa-arrow-left"></i></a>
+        <a href="#forward"><i class="fa fa-fw fa-arrow-right"></i></a>
+        <a href="#stop"><i class="fa fa-fw fa-times"></i></a>
+        <a href="rules.html"><i class="fa fa-fw fa-gamepad"></i></a>
+        <a href="index.html"><i class="fa fa-fw fa-home"></i></a>
+        <input class="search" type="text" placeholder="Search.." />
+    </div>
     <header>
-        <div class="topnav" style="border: 5px solid black;">
-            <a href="#back"><i class="fa fa-fw fa-arrow-left"></i></a>
-            <a href="#forward"><i class="fa fa-fw fa-arrow-right"></i></a>
-            <a href="#stop"><i class="fa fa-fw fa-times"></i></a>
-            <a href="#rules"><i class="fa fa-fw fa-gamepad"></i></a>
-            <a href="#home"><i class="fa fa-fw fa-home"></i></a>
-            <input class="search" type="text" placeholder="Search..">
-        </div>
-
         <h1>ROCHAMBEAU</h1>
     </header>
+    <main>
 
-    <div class="toggle-area">
-        <div class="container">
-            <div class="toggle-area">
-                <div class="game-toggle"><button game-type="of3">Best of 3</button></div>
-                <div class="game-toggle"><button game-type="of5">Best of 5</button></div>
-                <div class="game-toggle"><button game-type="of10">Best of 10</button></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="game-area">
-
-        <div class="choice-area">
+        <div class="toggle-area">
             <div class="container">
-                <div class="row">
-                    <div class="choice col" id="rock"><button><i class="fa-solid fa-hand-back-fist"></i></button>
-                    </div>
-                    <div class="choice col" id="paper"><button><i class="fa-solid fa-hand"></i></button></div>
-                    <div class="choice col" id="scissors"><button><i class="fa-solid fa-hand-scissors"></i></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="choice col-6" id="lizard"><button><i class="fa-solid fa-hand-lizard"></i></button></div>
-                    <div class="choice col-6" id="spock"><button><i class="fa-solid fa-hand-spock"></i></button></div>
+                <div class="toggle-area">
+                    <div class="game-toggle"><button game-type="of3">Best of 3</button></div>
+                    <div class="game-toggle"><button game-type="of5">Best of 5</button></div>
+                    <div class="game-toggle"><button game-type="of10">Best of 10</button></div>
                 </div>
             </div>
         </div>
+        <div class="game-area">
+
+            <div class="choice-area">
+                <div class="choice" id="rock"><button><i class="fa-solid fa-hand-back-fist"></i></button>
+                </div>
+                <div class="choice" id="paper"><button><i class="fa-solid fa-hand"></i></button></div>
+                <div class="choice" id="scissors"><button><i class="fa-solid fa-hand-scissors"></i></button>
+                </div>
+                <div class="choice" id="lizard"><button><i class="fa-solid fa-hand-lizard"></i></button></div>
+                <div class="choice" id="spock"><button><i class="fa-solid fa-hand-spock"></i></button></div>
+            </div>
 
             <div class="score-area">
                 <div class="round-result">
