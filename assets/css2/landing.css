@@ -44,4 +44,20 @@ margin-bottom: 100px;}
 
 .hero {text-align: center;}
 
+/*Footer*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #B8B8B8;
+  color: black;
+  text-align: center;
+}
+
+
+
+
+
 /* Landing Page End*/
