@@ -26,7 +26,7 @@ var bestOfRounds = 0;
 
 
 
-// --------------------------------------------  Event listeners
+// -------------------------------------------------------------  Event listeners
 
 // Adds event listener to each "best of" game mode button
 const gameToggleButtons = document.getElementsByClassName('game-toggle');
@@ -85,7 +85,8 @@ spock_but.addEventListener("click", function () {
 })
 
 
-// --------------------------------------------  Choices
+// -------------------------------------------------------------  Get choices
+
 function getUserChoice(userClicked) {
     userChoice = userClicked;
     console.log("the user chose " + userChoice);
@@ -101,48 +102,8 @@ function getComputerChoice() {
 }
 
 
-// ----------------------  Round result
-function iWin() {
-    userWin = true;
-    console.log("I won! ^-^");
+// -------------------------------------------------------------  Game logic
 
-    // Adds and removes visual feedback
-    document.getElementById(userChoice).classList.add("btn-success");
-    setTimeout(function() { document.getElementById(userChoice).classList.remove("btn-success") }, 1000);
-
-    addUserScore();
-
-    beatText(userChoice, computerChoice);
-
-    document.getElementById("win-lose-message").innerHTML = "<strong>I won! ^-^</strong>";
-}
-
-function iLose() {
-    userWin = false;
-    console.log("I lost! >,<");
-
-    // Adds and removes visual feedback
-    document.getElementById(userChoice).classList.add("btn-danger");
-    setTimeout(function() { document.getElementById(userChoice).classList.remove("btn-danger") }, 1000);
-
-    addComputerScore();
-
-    beatText(userChoice, computerChoice);
-
-    document.getElementById("win-lose-message").innerHTML = "<strong>I lost! >,<</strong>";
-}
-
-function iDraw() {
-    userWin = false;
-    console.log("No winners...");
-
-    document.getElementById("result-message").innerText = "Woops!";
-
-    document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
-}
-
-
-// --------------------------------------------  Game logic
 function gameLogic() {
 
     switch (userChoice + computerChoice) {
@@ -171,9 +132,52 @@ function gameLogic() {
         default:
             iLose();
     }
-    
+
     scoreCheck();
 }
+
+
+// -------------------------------------------------------------  Round result
+
+function iWin() {
+    userWin = true;
+    console.log("I won! ^-^");
+
+    // Adds and removes visual feedback
+    document.getElementById(userChoice).classList.add("btn-success");
+    setTimeout(function () { document.getElementById(userChoice).classList.remove("btn-success") }, 1000);
+
+    addUserScore();
+
+    beatText(userChoice, computerChoice);
+
+    document.getElementById("win-lose-message").innerHTML = "<strong>I won! ^-^</strong>";
+}
+
+function iLose() {
+    userWin = false;
+    console.log("I lost! >,<");
+
+    // Adds and removes visual feedback
+    document.getElementById(userChoice).classList.add("btn-danger");
+    setTimeout(function () { document.getElementById(userChoice).classList.remove("btn-danger") }, 1000);
+
+    addComputerScore();
+
+    beatText(userChoice, computerChoice);
+
+    document.getElementById("win-lose-message").innerHTML = "<strong>I lost! >,<</strong>";
+}
+
+function iDraw() {
+    userWin = false;
+    console.log("No winners...");
+
+    document.getElementById("result-message").innerText = "Woops!";
+
+    document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
+}
+
 
 function scoreCheck() {
     let userCheck = parseInt(document.getElementById("player-win").innerText);
@@ -187,7 +191,23 @@ function scoreCheck() {
 }
 
 
-// --------------------------------------------  Max rounds
+// -------------------------------------------------------------  Score increase
+
+// Nicked this bit off Love Maths to adjust scores
+
+function addUserScore() {
+    let oldScore = parseInt(document.getElementById("player-win").innerText);
+    document.getElementById("player-win").innerText = ++oldScore;
+}
+
+function addComputerScore() {
+    let oldScore = parseInt(document.getElementById("computer-win").innerText);
+    document.getElementById("computer-win").innerText = ++oldScore;
+}
+
+
+// -------------------------------------------------------------  Max rounds
+
 function playBestOf(maxRounds) {
 
     gameArea.classList.remove("hidden");
@@ -219,10 +239,11 @@ function endGame() {
 }
 
 
-// --------------------------------------------  Change text based off context
+// -------------------------------------------------------------  Change text based off who won
+
 function beatText(userChoice, computerChoice) {
     let beatContext = "";
-    // User wins
+
     // User wins
     if (userWin) {
         if (userChoice === "rock") {
@@ -286,28 +307,4 @@ function beatText(userChoice, computerChoice) {
     }
 
     resultMessage.innerText = beatContext;
-}
-
-
-
-// --------------------------------------------  Score increase
-// Nicked this bit off Love Maths to adjust scores
-
-
-/**
- * Gets current player score from DOM and adds 1,
- * storing back into DOM
- */
-function addUserScore() {
-    let oldScore = parseInt(document.getElementById("player-win").innerText);
-    document.getElementById("player-win").innerText = ++oldScore;
-}
-
-/**
- * Gets current computer score from DOM and adds 1,
- * storing back into DOM
- */
-function addComputerScore() {
-    let oldScore = parseInt(document.getElementById("computer-win").innerText);
-    document.getElementById("computer-win").innerText = ++oldScore;
 }
