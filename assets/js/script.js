@@ -1,22 +1,32 @@
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissors_div = document.getElementById("scissors");
-const lizard_div = document.getElementById("lizard");
-const spock_div = document.getElementById("spock");
+// Buttons
+const rock_but = document.getElementById("rock");
+const paper_but = document.getElementById("paper");
+const scissors_but = document.getElementById("scissors");
+const lizard_but = document.getElementById("lizard");
+const spock_but = document.getElementById("spock");
 
 let resultMessage = document.getElementById("result-message");
 
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
+// Contains the parent div of the game area and the "please select" text
+const gameArea = document.getElementById("game-area");
+const selectGameText = document.getElementById("select-game");
+
+// Round progress
 var userChoice = "";
 var computerChoice = "";
-
 var userWin = false;
 
-// End game variables
+
+// Ending game flags
 var winCondition = 0;
 var maxRounds = 0;
 var bestOfRounds = 0;
+
+
+
+// --------------------------------------------  Event listeners
 
 // Adds event listener to each "best of" game mode button
 const gameToggleButtons = document.getElementsByClassName('game-toggle');
@@ -43,42 +53,39 @@ for (let i = 0; i < gameToggleButtons.length; i++) {
     });
 }
 
-
-
-
-// --------------------------------------------  Event listeners
-rock_div.addEventListener("click", function () {
+// Sets event listener to each choice -- needs rewrite for elegance
+rock_but.addEventListener("click", function () {
     getUserChoice("rock");
     getComputerChoice();
     gameLogic();
 })
 
-paper_div.addEventListener("click", function () {
+paper_but.addEventListener("click", function () {
     getUserChoice("paper");
     getComputerChoice();
     gameLogic();
 })
 
-scissors_div.addEventListener("click", function () {
+scissors_but.addEventListener("click", function () {
     getUserChoice("scissors");
     getComputerChoice();
     gameLogic();
 })
 
-lizard_div.addEventListener("click", function () {
+lizard_but.addEventListener("click", function () {
     getUserChoice("lizard");
     getComputerChoice();
     gameLogic();
 })
 
-spock_div.addEventListener("click", function () {
+spock_but.addEventListener("click", function () {
     getUserChoice("spock");
     getComputerChoice();
     gameLogic();
 })
 
 
-// -------------------------------------------- Choices
+// --------------------------------------------  Choices
 function getUserChoice(userClicked) {
     userChoice = userClicked;
     console.log("the user chose " + userChoice);
@@ -94,12 +101,15 @@ function getComputerChoice() {
 }
 
 
-// --------------------------------------------  Game State
+// ----------------------  Round result
 function iWin() {
     userWin = true;
     console.log("I won! ^-^");
 
-    // Nicked this bit off Love Maths to increase score
+    // Adds and removes visual feedback
+    document.getElementById(userChoice).classList.add("btn-success");
+    setTimeout(function() { document.getElementById(userChoice).classList.remove("btn-success") }, 1000);
+
     addUserScore();
 
     beatText(userChoice, computerChoice);
@@ -110,6 +120,10 @@ function iWin() {
 function iLose() {
     userWin = false;
     console.log("I lost! >,<");
+
+    // Adds and removes visual feedback
+    document.getElementById(userChoice).classList.add("btn-danger");
+    setTimeout(function() { document.getElementById(userChoice).classList.remove("btn-danger") }, 1000);
 
     addComputerScore();
 
@@ -122,38 +136,13 @@ function iDraw() {
     userWin = false;
     console.log("No winners...");
 
-    document.getElementById("result-message").innerText = "";
+    document.getElementById("result-message").innerText = "Woops!";
 
     document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
 }
 
 
-// -------------------------------------------- Max rounds
-function playBestOf(maxRounds) {
-    bestOfRounds = maxRounds;
-    if (maxRounds === 3) {
-        winCondition = 2;
-    }
-    else if (maxRounds === 5) {
-        winCondition = 3;
-    }
-    else if (maxRounds === 10) {
-        winCondition = 6;
-    }
-}
-
-function endGame() {
-    const playerScore = parseInt(document.getElementById("player-win").innerText);
-    const computerScore = parseInt(document.getElementById("computer-win").innerText);
-    if (playerScore > computerScore) {
-        alert(`Congratulations! You won the best of ${bestOfRounds}!`);
-    } else if (playerScore < computerScore) {
-        alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
-    } else {
-        alert("The game ended in a tie.");
-    }
-}
-
+// --------------------------------------------  Game logic
 function gameLogic() {
 
     switch (userChoice + computerChoice) {
@@ -197,6 +186,37 @@ function scoreCheck() {
     }
 }
 
+
+// --------------------------------------------  Max rounds
+function playBestOf(maxRounds) {
+
+    gameArea.classList.remove("hidden");
+    selectGameText.innerHTML = `<h5>You have selected best of ${maxRounds}</h5>`;
+
+    // Sets game goal
+    bestOfRounds = maxRounds;
+    if (maxRounds === 3) {
+        winCondition = 2;
+    }
+    else if (maxRounds === 5) {
+        winCondition = 3;
+    }
+    else if (maxRounds === 10) {
+        winCondition = 6;
+    }
+}
+
+function endGame() {
+    const playerScore = parseInt(document.getElementById("player-win").innerText);
+    const computerScore = parseInt(document.getElementById("computer-win").innerText);
+    if (playerScore > computerScore) {
+        alert(`Congratulations! You won the best of ${bestOfRounds}!`);
+    } else if (playerScore < computerScore) {
+        alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
+    } else {
+        alert("The game ended in a tie.");
+    }
+}
 
 
 // --------------------------------------------  Change text based off context
@@ -271,6 +291,8 @@ function beatText(userChoice, computerChoice) {
 
 
 // --------------------------------------------  Score increase
+// Nicked this bit off Love Maths to adjust scores
+
 
 /**
  * Gets current player score from DOM and adds 1,
