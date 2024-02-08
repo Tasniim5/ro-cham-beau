@@ -2,6 +2,8 @@
 .topnav {
     background-color: #B8B8B8;
     overflow: hidden;
+    margin: -8px;
+    padding: 0px;
   }
   
   .topnav a {
@@ -21,7 +23,9 @@
 .search {position:absolute;
     right: 0%;
     margin-top: 20px;
+    margin-right: 20px;
    float: center;
+   border: solid black;
 }
 
   /* Main */
@@ -39,3 +43,12 @@ margin-bottom: 100px;}
 }
 
 .hero {text-align: center;}
+
+
+/*Footer*/
+footer {color: black;
+  overflow: hidden;
+  margin: -8px;
+  padding: 0px;}
+  
+p {text-align: center;}
