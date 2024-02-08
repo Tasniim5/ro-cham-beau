@@ -67,7 +67,6 @@
 
 /*Rules Page*/
 /*main*/
-/*Stlyes to the rules page*/
 /* Styles for the rules page */
 * {
     padding: 0;
@@ -154,13 +153,7 @@
         max-height: 550px;
         margin-top: 50px;
     }
-
-
-    /*End*/
 }
-
-    /*End*/
-
 /*Rules Page End*/
 
 * {
@@ -203,5 +196,5 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
-
     font-size: 2rem;}
+/*main*/
