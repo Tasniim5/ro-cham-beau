@@ -61,3 +61,16 @@ header>h1 {
 #select-game {
     text-align: center;
 }
+
+#victory-defeat-message {
+    text-align: center;
+    color: black;
+}
+
+/* .win {
+    color: green;
+}
+
+.lose {
+    color: red;
+} */

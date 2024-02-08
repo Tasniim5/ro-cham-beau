@@ -1,3 +1,5 @@
+// -------------------------------------------------------------  Variables
+
 // Buttons
 const rock_but = document.getElementById("rock");
 const paper_but = document.getElementById("paper");
@@ -5,9 +7,11 @@ const scissors_but = document.getElementById("scissors");
 const lizard_but = document.getElementById("lizard");
 const spock_but = document.getElementById("spock");
 
-let resultMessage = document.getElementById("result-message");
-
+// Array for computer to choose from
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+
+// Round result
+let resultMessage = document.getElementById("result-message");
 
 // Contains the parent div of the game area and the "please select" text
 const gameArea = document.getElementById("game-area");
@@ -24,6 +28,8 @@ var winCondition = 0;
 var maxRounds = 0;
 var bestOfRounds = 0;
 
+// Match end message div
+let vicDefMessage = document.getElementById("victory-defeat-message");
 
 
 // -------------------------------------------------------------  Event listeners
@@ -137,7 +143,7 @@ function gameLogic() {
 }
 
 
-// -------------------------------------------------------------  Round result
+// -------------------------------  Round result
 
 function iWin() {
     userWin = true;
@@ -151,7 +157,7 @@ function iWin() {
 
     beatText(userChoice, computerChoice);
 
-    document.getElementById("win-lose-message").innerHTML = "<strong>I won! ^-^</strong>";
+    document.getElementById("win-lose-message").innerHTML = "<strong>You won! ^-^</strong>";
 }
 
 function iLose() {
@@ -166,7 +172,7 @@ function iLose() {
 
     beatText(userChoice, computerChoice);
 
-    document.getElementById("win-lose-message").innerHTML = "<strong>I lost! >,<</strong>";
+    document.getElementById("win-lose-message").innerHTML = "<strong>You lost! >,<</strong>";
 }
 
 function iDraw() {
@@ -177,7 +183,6 @@ function iDraw() {
 
     document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
 }
-
 
 function scoreCheck() {
     let userCheck = parseInt(document.getElementById("player-win").innerText);
@@ -191,55 +196,7 @@ function scoreCheck() {
 }
 
 
-// -------------------------------------------------------------  Score increase
-
-// Nicked this bit off Love Maths to adjust scores
-
-function addUserScore() {
-    let oldScore = parseInt(document.getElementById("player-win").innerText);
-    document.getElementById("player-win").innerText = ++oldScore;
-}
-
-function addComputerScore() {
-    let oldScore = parseInt(document.getElementById("computer-win").innerText);
-    document.getElementById("computer-win").innerText = ++oldScore;
-}
-
-
-// -------------------------------------------------------------  Max rounds
-
-function playBestOf(maxRounds) {
-
-    gameArea.classList.remove("hidden");
-    selectGameText.innerHTML = `<h5>You have selected best of ${maxRounds}</h5>`;
-
-    // Sets game goal
-    bestOfRounds = maxRounds;
-    if (maxRounds === 3) {
-        winCondition = 2;
-    }
-    else if (maxRounds === 5) {
-        winCondition = 3;
-    }
-    else if (maxRounds === 10) {
-        winCondition = 6;
-    }
-}
-
-function endGame() {
-    const playerScore = parseInt(document.getElementById("player-win").innerText);
-    const computerScore = parseInt(document.getElementById("computer-win").innerText);
-    if (playerScore > computerScore) {
-        alert(`Congratulations! You won the best of ${bestOfRounds}!`);
-    } else if (playerScore < computerScore) {
-        alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
-    } else {
-        alert("The game ended in a tie.");
-    }
-}
-
-
-// -------------------------------------------------------------  Change text based off who won
+// -------------------------------  Change text based off who won
 
 function beatText(userChoice, computerChoice) {
     let beatContext = "";
@@ -307,4 +264,61 @@ function beatText(userChoice, computerChoice) {
     }
 
     resultMessage.innerText = beatContext;
+}
+
+
+// -------------------------------------------------------------  Score increase
+
+// Nicked this bit off Love Maths to adjust scores
+
+function addUserScore() {
+    let oldScore = parseInt(document.getElementById("player-win").innerText);
+    document.getElementById("player-win").innerText = ++oldScore;
+}
+
+function addComputerScore() {
+    let oldScore = parseInt(document.getElementById("computer-win").innerText);
+    document.getElementById("computer-win").innerText = ++oldScore;
+}
+
+
+// -------------------------------------------------------------  Match data and Win condition
+
+function playBestOf(maxRounds) {
+
+    gameArea.classList.remove("hidden");
+    selectGameText.innerHTML = `<h5>You have selected best of ${maxRounds}</h5>`;
+
+    // Sets game goal
+    bestOfRounds = maxRounds;
+    if (maxRounds === 3) {
+        winCondition = 2;
+    }
+    else if (maxRounds === 5) {
+        winCondition = 3;
+    }
+    else if (maxRounds === 10) {
+        winCondition = 6;
+    }
+}
+
+function endGame() {
+    const playerScore = parseInt(document.getElementById("player-win").innerText);
+    const computerScore = parseInt(document.getElementById("computer-win").innerText);
+
+    if (playerScore > computerScore) {
+        // alert(`Congratulations! You won the best of ${bestOfRounds}!`);
+        vicDefMessage.innerHTML = `<h2>Congratulations! You won the best of ${bestOfRounds}!</h2>`;
+        const innerVicDefText = vicDefMessage.querySelector("h2");
+        innerVicDefText.style.color = "green";
+    } 
+
+    else if (playerScore < computerScore) {
+        // alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
+        vicDefMessage.innerHTML = `<h2>The computer won the best of ${bestOfRounds}. Better luck next time!</h2>`;
+        const innerVicDefText = vicDefMessage.querySelector("h2");
+        innerVicDefText.style.color = "red";
+    } else {
+        alert("The game ended in a tie.");
+    }
 }
