@@ -13,6 +13,39 @@ var computerChoice = "";
 
 var userWin = false;
 
+// End game variables
+var winCondition = 0;
+var maxRounds = 0;
+var bestOfRounds = 0;
+
+// Adds event listener to each "best of" game mode button
+const gameToggleButtons = document.getElementsByClassName('game-toggle');
+for (let i = 0; i < gameToggleButtons.length; i++) {
+    const button = gameToggleButtons[i].getElementsByTagName('button')[0];
+    button.addEventListener('click', function () {
+        const gameType = button.getAttribute('game-type');
+        switch (gameType) {
+            case 'of3':
+                playBestOf(3);
+                console.log("best of 3 chosen");
+                break;
+            case 'of5':
+                playBestOf(5);
+                console.log("best of 5 chosen");
+                break;
+            case 'of10':
+                playBestOf(10);
+                console.log("best of 10 chosen");
+                break;
+            default:
+                console.error('Invalid game type');
+        }
+    });
+}
+
+
+
+
 // --------------------------------------------  Event listeners
 rock_div.addEventListener("click", function () {
     getUserChoice("rock");
@@ -88,13 +121,41 @@ function iLose() {
 function iDraw() {
     userWin = false;
     console.log("No winners...");
-    
+
     document.getElementById("result-message").innerText = "";
 
     document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
 }
 
+
+// -------------------------------------------- Max rounds
+function playBestOf(maxRounds) {
+    bestOfRounds = maxRounds;
+    if (maxRounds === 3) {
+        winCondition = 2;
+    }
+    else if (maxRounds === 5) {
+        winCondition = 3;
+    }
+    else if (maxRounds === 10) {
+        winCondition = 6;
+    }
+}
+
+function endGame() {
+    const playerScore = parseInt(document.getElementById("player-win").innerText);
+    const computerScore = parseInt(document.getElementById("computer-win").innerText);
+    if (playerScore > computerScore) {
+        alert(`Congratulations! You won the best of ${bestOfRounds}!`);
+    } else if (playerScore < computerScore) {
+        alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
+    } else {
+        alert("The game ended in a tie.");
+    }
+}
+
 function gameLogic() {
+
     switch (userChoice + computerChoice) {
         // User wins
         case "rockscissors":
@@ -121,7 +182,22 @@ function gameLogic() {
         default:
             iLose();
     }
+    
+    scoreCheck();
 }
+
+function scoreCheck() {
+    let userCheck = parseInt(document.getElementById("player-win").innerText);
+    let computerCheck = parseInt(document.getElementById("computer-win").innerText);
+    if (userCheck === winCondition) {
+        endGame();
+    }
+    else if (computerCheck === winCondition) {
+        endGame();
+    }
+}
+
+
 
 // --------------------------------------------  Change text based off context
 function beatText(userChoice, computerChoice) {
