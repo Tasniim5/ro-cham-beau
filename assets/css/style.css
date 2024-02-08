@@ -123,11 +123,9 @@
 
 /* Responsive styles */
 @media (max-width: 760px) {
-<<<<<<< HEAD
-=======
 
     /*Stlyes to the rules page*/
->>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
+
     .split-container {
         flex-direction: column;
     }
@@ -143,11 +141,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
-<<<<<<< HEAD
-=======
 
     /*Stlyes to the rules page*/
->>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
+
     .header {
         align-items: center;
         margin-top: 20px;
@@ -207,10 +203,5 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
-<<<<<<< HEAD
+
     font-size: 2rem;}
-/*main*/
-}
-=======
-    font-size: 2rem; } }
->>>>>>> 9e14afae288152c49a73dbfcb0c01103587029ed
