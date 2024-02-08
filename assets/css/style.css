@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/*Rules Page*/
-/*main*/
-/*Stlyes to the rules page*/
-=======
 /* Landing Page */
 /* Navigation Bar */
 .topnav {
@@ -49,7 +44,6 @@
     text-align: center;
 }
 
->>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
 .how-to-play h4 {
     font-weight: bold;
 }
@@ -114,11 +108,6 @@
         max-height: 550px;
         margin-top: 50px;
     }
-<<<<<<< HEAD
-}
-    /*End*/
-/*Rules Page End*/
-=======
     /*End*/
 /*Rules Page End*/
 =======
@@ -126,7 +115,6 @@
     margin: 0;
     padding: 0;
 }
->>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
 
 header > h1 {
     text-align: center;
@@ -163,11 +151,6 @@ header > h1 {
 
 .choice button {
     padding: 10px 30px;
-<<<<<<< HEAD
-    font-size: 2rem; }
-/*main*/
-=======
     font-size: 2rem;
 /*main*/
 }
->>>>>>> 2432b04c5a8bebbc200fc1c071375735cd008ab6
