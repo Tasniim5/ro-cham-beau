@@ -68,16 +68,32 @@
 /*Rules Page*/
 /*main*/
 /*Stlyes to the rules page*/
+/* Styles for the rules page */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
 .header {
     text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .how-to-play h4 {
     font-weight: bold;
 }
+.how-to-play p {
+    text-wrap: wrap;
+}
 
 .how-to-play {
     margin-top: 50px;
+}
+.instructions{
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #a2a2a2;
 }
 
 .split-container {
@@ -105,10 +121,11 @@
     margin-top: 20px;
 }
 
-/*end of css for rules page*/
+/* Responsive styles */
 @media (max-width: 760px) {
 
     /*Stlyes to the rules page*/
+
     .split-container {
         flex-direction: column;
     }
@@ -121,18 +138,17 @@
         max-width: 100%;
         padding: 0;
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
 
     /*Stlyes to the rules page*/
+
     .header {
         align-items: center;
         margin-top: 20px;
         margin-bottom: -20px;
     }
-
     .split-container img {
         max-width: 100%;
         max-height: 550px;
@@ -142,3 +158,50 @@
 
     /*End*/
 }
+
+    /*End*/
+
+/*Rules Page End*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+.toggle-area {
+    margin: auto;
+    text-align: center;
+}
+
+.game-toggle {
+    display: inline-block;
+}
+
+.game-area {
+    margin: auto auto;
+}
+
+.choice-area {
+    text-align: center;
+}
+
+.choice {
+    display:inline-block;
+}
+
+.score-area {
+    text-align: center;
+}
+
+.choice {
+    margin: 10px;
+}
+
+.choice button {
+    padding: 10px 30px;
+
+    font-size: 2rem;}
