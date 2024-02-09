@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-.container {
-    min-height: 100vh;
+main {
+    min-height: 70vh;
     background-color: #f4f4f4;
     color: #a2a2a2;
 }
@@ -16,32 +16,65 @@ header {
     margin-top: 10px;
 }
 
-.tabs-container {
+.toggle-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.tab {
+button,
+.score-track {
     text-decoration: none;
     color: black;
     cursor: pointer;
-    border-radius: 18px;
+    border-radius: 30px;
     transition: background 0.1s, color 0.1s;
     background: linear-gradient(145deg, #ffffff, #dcdcdc);
     box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     margin: 10px;
+    max-width: fit-content;
+    min-height: 100px;
+}
+.round-result {
+    min-height: 150px;
+    
+}
+.choice {
+    margin: 20px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
-.tab:hover {
+.choice-area .choice button i {
+    font-size: 100px;
+}
+choice-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin: 20px;
+    }
+
+.score-track {
+    text-align: center;
+    display: inline-block;
+    
+}
+
+button:hover {
     background: linear-gradient(145deg, #f4f4f4, #cecece);
     color: #888;
 }
 
-.tab.active {
+button.active {
     background-color: #f4f4f4;
     color: #bdbdbd;
     cursor: default;
     box-shadow: inset 3px 3px 5px #cbcbcb, inset -3px -3px 5px #ffffff;
 }
+
+
+
+
