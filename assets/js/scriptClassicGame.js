@@ -43,7 +43,7 @@ const gameToggleButtons = document.getElementsByClassName('game-toggle');
 for (let i = 0; i < gameToggleButtons.length; i++) {
     const button = gameToggleButtons[i].getElementsByTagName('button')[0];
     button.addEventListener('click', function () {
-        const gameType = button.getAttribute('game-type');
+        const gameType = button.getAttribute('data-type');
         switch (gameType) {
             case 'of3':
                 playBestOf(3);

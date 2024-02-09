@@ -92,7 +92,7 @@ footer a {
 }
 
 .footer p {
-    margin-top: 10;
+    margin-top: 10px;
     margin-bottom: -10px;
 
 }
@@ -195,13 +195,18 @@ footer a {
     }
 
     @media (max-width: 320px) {
-        .topnav { max-width: 100%;
-        max-height: 550px;
-        margin-top: 50px;}
-    
-        .search { max-width: 100%;
+        .topnav {
+            max-width: 100%;
             max-height: 550px;
-            margin-top: 50px;}}
+            margin-top: 50px;
+        }
+
+        .search {
+            max-width: 100%;
+            max-height: 550px;
+            margin-top: 50px;
+        }
+    }
 }
 
 /*Rules Page End*/
