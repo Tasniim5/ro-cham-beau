@@ -76,18 +76,11 @@ scissors_but.addEventListener("click", function () {
     startGame("scissors");
 });
 
-lizard_but.addEventListener("click", function () {
-    startGame("lizard");
-});
-
-spock_but.addEventListener("click", function () {
-    startGame("spock");
-});
 
 // Reset game to select
 tryAgain_but.addEventListener("click", function () {
     tryAgain();
-});
+})
 
 
 // -------------------------------------------------------------  Get choices
