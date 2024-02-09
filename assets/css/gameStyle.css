@@ -49,7 +49,7 @@ button,
 .choice-area .choice button i {
     font-size: 100px;
 }
-choice-area {
+.choice-area {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -75,6 +75,36 @@ button.active {
     box-shadow: inset 3px 3px 5px #cbcbcb, inset -3px -3px 5px #ffffff;
 }
 
+/* rock paper scissors row */
+.rps {
+    margin: 10px;
+    margin-bottom: 30px;
+}
 
+/* lizard spock row*/
+.ls {
+    margin: 10px;
+}
+
+/* JavaScript targets */
+.hidden {
+    display: none;
+}
+
+#select-game {
+    text-align: center;
+}
+
+#victory-defeat-message {
+    text-align: center;
+    color: black;
+    margin: 30px;
+}
+
+#try-again-div {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 
