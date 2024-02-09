@@ -4,11 +4,9 @@
 const rock_but = document.getElementById("rock");
 const paper_but = document.getElementById("paper");
 const scissors_but = document.getElementById("scissors");
-const lizard_but = document.getElementById("lizard");
-const spock_but = document.getElementById("spock");
 
 // Array for computer to choose from
-const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+const choices = ["rock", "paper", "scissors"];
 
 // Contains the divs that need to be added/removed by code
 const toggleArea = document.getElementById("toggle-area-div");
@@ -92,7 +90,7 @@ function getUserChoice(userClicked) {
 }
 
 function getComputerChoice() {
-    randomNumber = Math.floor(Math.random() * 5);
+    randomNumber = Math.floor(Math.random() * 3);
     computerChoice = choices[randomNumber];
     console.log("the computer chose " + computerChoice);
     document.getElementById("computer-choice").innerText = `Computer chose ${computerChoice}`;
@@ -117,23 +115,14 @@ function gameLogic() {
     switch (userChoice + computerChoice) {
         // User wins
         case "rockscissors":
-        case "rocklizard":
         case "paperrock":
-        case "paperspock":
         case "scissorspaper":
-        case "scissorslizard":
-        case "lizardpaper":
-        case "lizardspock":
-        case "spockrock":
-        case "spockscissors":
             iWin();
             break;
         // Draw state
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-        case "lizardlizard":
-        case "spockspock":
             iDraw();
             break;
         // If not matching either that means PC wins
@@ -212,26 +201,11 @@ function beatText(userChoice, computerChoice) {
         if (userChoice === "rock") {
             beatContext = `Rock crushes ${computerChoice}`;
         }
-        else if (userChoice === "paper" && computerChoice === "spock") {
-            beatContext = "Paper disproves Spock";
-        }
         else if (userChoice === "paper") {
             beatContext = "Paper covers Rock";
         }
-        else if (userChoice === "scissors" && computerChoice === "paper") {
-            beatContext = "Scissors cut Paper";
-        }
         else if (userChoice === "scissors") {
-            beatContext = "Scissors chop Lizard";
-        }
-        else if (userChoice === "lizard" && computerChoice === "paper") {
-            beatContext = "Lizard eats Paper";
-        }
-        else if (userChoice === "lizard") {
-            beatContext = "Lizard Poisons Spock";
-        }
-        else if (userChoice === "spock") {
-            beatContext = `Spock vaporizes ${computerChoice}`;
+            beatContext = "Scissors cut Paper";
         }
     }
 
@@ -240,32 +214,11 @@ function beatText(userChoice, computerChoice) {
         if (userChoice === "rock" && computerChoice === "paper") {
             beatContext = "Rock is covered by Paper";
         }
-        else if (userChoice === "rock") {
-            beatContext = "Rock is vaporized by Spock";
-        }
-        else if (userChoice === "paper" && computerChoice === "lizard") {
-            beatContext = "Paper is eaten by Lizard";
-        }
-        else if (userChoice === "paper") {
+        else if (userChoice === "paper" && computerChoice === "scissors") {
             beatContext = "Paper is cut by Scissors";
         }
         else if (userChoice === "scissors" && computerChoice === "rock") {
             beatContext = "Scissors are crushed by Rock";
-        }
-        else if (userChoice === "scissors") {
-            beatContext = "Scissors are vaporized by Spock";
-        }
-        else if (userChoice === "lizard" && computerChoice === "rock") {
-            beatContext = "Lizard is crushed by Rock";
-        }
-        else if (userChoice === "lizard") {
-            beatContext = "Lizard is chopped by Scissors";
-        }
-        else if (userChoice === "spock" && computerChoice === "lizard") {
-            beatContext = "Spock is poisoned by Lizard";
-        }
-        else if (userChoice === "spock") {
-            beatContext = "Spock is disproved by paper";
         }
     }
 
