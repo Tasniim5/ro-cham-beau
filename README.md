@@ -120,7 +120,6 @@ There were 3 bugs found.
 
 Bug 1 was not a high enough priority as we were working to making every aspect of the game function smoothly and unfortunately we ran out of time for today.
 
-
 ## Deployment
 This site was successfully on GitHub pages by following these steps: Firstly, selecting the Settings tab in the GitHub repository, then selecting the Master Branch from the source menu, and saw the page refresh with a ribbon indicating the deployment was successful. You can access the live link at https://code-institute-org.github.io/love-running-2.0/index.html.
 
