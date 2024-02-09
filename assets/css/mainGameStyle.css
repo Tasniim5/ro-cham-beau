@@ -65,12 +65,11 @@ header>h1 {
 #victory-defeat-message {
     text-align: center;
     color: black;
+    margin: 30px;
 }
 
-/* .win {
-    color: green;
+#try-again-div {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-
-.lose {
-    color: red;
-} */

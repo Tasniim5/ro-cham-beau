@@ -10,23 +10,27 @@ const spock_but = document.getElementById("spock");
 // Array for computer to choose from
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
-// Round result
-let resultMessage = document.getElementById("result-message");
-
-// Contains the parent div of the game area and the "please select" text
+// Contains the divs that need to be added/removed by code
+const toggleArea = document.getElementById("toggle-area-div");
 const gameArea = document.getElementById("game-area");
 const selectGameText = document.getElementById("select-game");
+const tryAgain_div = document.getElementById("try-again-div");
+const tryAgain_but = document.getElementById("try-again-button");
 
 // Round progress
 var userChoice = "";
 var computerChoice = "";
 var userWin = false;
 
+// Round result
+let resultMessage = document.getElementById("result-message");
+
 
 // Ending game flags
 var winCondition = 0;
 var maxRounds = 0;
 var bestOfRounds = 0;
+var gameFinished = false;
 
 // Match end message div
 let vicDefMessage = document.getElementById("victory-defeat-message");
@@ -59,35 +63,30 @@ for (let i = 0; i < gameToggleButtons.length; i++) {
     });
 }
 
-// Sets event listener to each choice -- needs rewrite for elegance
+// Sets event listener to each button -- needs rewrite similar to above ^^^
 rock_but.addEventListener("click", function () {
-    getUserChoice("rock");
-    getComputerChoice();
-    gameLogic();
+    startGame("rock");
 })
 
 paper_but.addEventListener("click", function () {
-    getUserChoice("paper");
-    getComputerChoice();
-    gameLogic();
+    startGame("paper");
 })
 
 scissors_but.addEventListener("click", function () {
-    getUserChoice("scissors");
-    getComputerChoice();
-    gameLogic();
+    startGame("scissors");
 })
 
 lizard_but.addEventListener("click", function () {
-    getUserChoice("lizard");
-    getComputerChoice();
-    gameLogic();
+    startGame("lizard");
 })
 
 spock_but.addEventListener("click", function () {
-    getUserChoice("spock");
-    getComputerChoice();
-    gameLogic();
+    startGame("spock");
+})
+
+// Reset game to select
+tryAgain_but.addEventListener("click", function () {
+    tryAgain();
 })
 
 
@@ -105,6 +104,14 @@ function getComputerChoice() {
     console.log("the computer chose " + computerChoice);
     document.getElementById("computer-choice").innerText = `Computer chose ${computerChoice}`;
     return computerChoice;
+}
+
+function startGame(userClicked) {
+    if (!gameFinished) {
+        getUserChoice(userClicked);
+        getComputerChoice();
+        gameLogic();
+    }
 }
 
 
@@ -179,8 +186,12 @@ function iDraw() {
     userWin = false;
     console.log("No winners...");
 
-    document.getElementById("result-message").innerText = "Woops!";
+    // Adds and removes visual feedback
+    document.getElementById(userChoice).classList.add("btn-info");
+    setTimeout(function () { document.getElementById(userChoice).classList.remove("btn-info") }, 1000);
 
+
+    document.getElementById("result-message").innerText = "Woops!";
     document.getElementById("win-lose-message").innerHTML = "<strong>No winners...</strong>";
 }
 
@@ -285,7 +296,9 @@ function addComputerScore() {
 // -------------------------------------------------------------  Match data and Win condition
 
 function playBestOf(maxRounds) {
-
+    if (!toggleArea.classList.contains("hidden")) {
+        toggleArea.classList.add("hidden");
+    }
     gameArea.classList.remove("hidden");
     selectGameText.innerHTML = `<h5>You have selected best of ${maxRounds}</h5>`;
 
@@ -303,15 +316,18 @@ function playBestOf(maxRounds) {
 }
 
 function endGame() {
-    const playerScore = parseInt(document.getElementById("player-win").innerText);
-    const computerScore = parseInt(document.getElementById("computer-win").innerText);
+    gameFinished = true;
 
+    let playerScore = parseInt(document.getElementById("player-win").innerText);
+    let computerScore = parseInt(document.getElementById("computer-win").innerText);
+
+    // Match win logic
     if (playerScore > computerScore) {
         // alert(`Congratulations! You won the best of ${bestOfRounds}!`);
         vicDefMessage.innerHTML = `<h2>Congratulations! You won the best of ${bestOfRounds}!</h2>`;
         const innerVicDefText = vicDefMessage.querySelector("h2");
         innerVicDefText.style.color = "green";
-    } 
+    }
 
     else if (playerScore < computerScore) {
         // alert(`The computer won the best of ${bestOfRounds}. Better luck next time!`);
@@ -319,6 +335,29 @@ function endGame() {
         const innerVicDefText = vicDefMessage.querySelector("h2");
         innerVicDefText.style.color = "red";
     } else {
-        alert("The game ended in a tie.");
+        // alert("The game ended in a tie.");
+        vicDefMessage.innerHTML = `<h2>Looks like you tied! No winners...</h2>`;
+        const innerVicDefText = vicDefMessage.querySelector("h2");
+        innerVicDefText.style.color = "blue";
     }
+
+    // Set game inactive
+    tryAgain_div.classList.remove("hidden");
+    
+
+}
+
+
+// -------------------------------------------------------------  Try again button
+
+function tryAgain() {
+    gameFinished = false;
+
+    document.getElementById("player-win").innerText = 0;
+    document.getElementById("computer-win").innerText = 0;
+
+    gameArea.classList.add("hidden");
+    tryAgain_div.classList.add("hidden");
+
+    toggleArea.classList.remove("hidden");
 }
