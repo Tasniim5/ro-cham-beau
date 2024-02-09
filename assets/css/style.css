@@ -159,9 +159,14 @@ footer a {
     margin-top: 20px;
     margin-bottom: 5px;
 }
-
 /* Responsive styles */
-@media (max-width: 760px) {
+@media only screen and (max-width: 500px) {
+    .search {
+            display: none; 
+      
+    }}
+
+@media (min-width: 200px) and (max-width:768px) {
 
     /*Stlyes to the rules page*/
 
@@ -179,7 +184,7 @@ footer a {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 780px) and (max-width: 1440px) {
     /*Stlyes to the rules page*/
 
     .header {
