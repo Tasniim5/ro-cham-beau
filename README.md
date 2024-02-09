@@ -1,5 +1,7 @@
 <h1 align="centre">RO-CHAM-BEAU!</h1>
 
+[View live project here](https://tasniim5.github.io/ro-cham-beau/)
+
 Introducing Rochambeau, the cutting-edge tech website that brings a modern twist to the classic game of rock-paper-scissors with the addition of Spock and lizard! With interactive gameplay and a sleek design, Rochambeau offers hours of fun for users of all ages. Stay ahead of the curve and challenge your friends to a game like never before on Rochambeau. Join our community now and experience the next level of gaming! 
 
 With the ability to play against a computer in various difficulty modes. Play Rock, Paper, Lizard, Spock. Or if you prefer a traditional game of just Rock, Paper, Scissors, take on the computer and aim to win. 
@@ -61,6 +63,12 @@ The incorporation of clear and accessible rules within the game serves to establ
 -Timer function (Beat the clock)
 
 ## Wireframes
+### Index Page
+![index](/assets/images/Wireframe%201.png)
+### Game Page
+![game](/assets/images/Wireframe%202.png)
+### About Page 
+![about](/assets/images/Wireframe%203.png)
 
 ## Technologies Used
 - __Programming Languages__
