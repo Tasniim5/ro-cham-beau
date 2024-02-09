@@ -7,7 +7,7 @@ Introducing Rochambeau, the cutting-edge tech website that brings a modern twist
 With the ability to play against a computer in various difficulty modes. Play Rock, Paper, Lizard, Spock. Or if you prefer a traditional game of just Rock, Paper, Scissors, take on the computer and aim to win. 
 
 ## Responsive Mockup
-(/assets/images/Mockups.png)
+![mockups](/assets/images/Mockups.png)
 
 ## Index 
 * [Features](#features)
