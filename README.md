@@ -63,10 +63,10 @@ The incorporation of clear and accessible rules within the game serves to establ
 ## Wireframes
 ### Index Page
 ![index](/assets/images/Wireframe%201.png)
-### About Page
-![about](/assets/images/Wireframe%202.png)
-### Game Page 
-![game](/assets/images/Wireframe%203.png)
+### Game Page
+![game](/assets/images/Wireframe%202.png)
+### About Page 
+![about](/assets/images/Wireframe%203.png)
 
 ## Technologies Used
 - __Programming Languages__
