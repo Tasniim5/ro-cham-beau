@@ -13,6 +13,7 @@
     <title>ROCHAMBEAU</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/gameStyle.css">
+    <link rel="stylesheet" href="assets/css/mainGameStyle.css">
 </head>
 
 <body>
@@ -29,7 +30,6 @@
     </header>
 
     <main>
-        
         <div class="toggle-area">
             <div class="container">
                 <div class="toggle-area">
@@ -40,73 +40,56 @@
             </div>
         </div>
 
-        <div id="select-game"><h1>Please select a game type to get started!</h1></div>
-
-        <div id="game-area"  class="hidden">
-    <main>
-
-        <div class="toggle-area">
-            <div class="container">
-                <div class="toggle-area">
-                    <div class="game-toggle"><button game-type="of3">Best of 3</button></div>
-                    <div class="game-toggle"><button game-type="of5">Best of 5</button></div>
-                    <div class="game-toggle"><button game-type="of10">Best of 10</button></div>
-                </div>
-            </div>
+        <div id="select-game">
+            <h1>Please select a game type to get started!</h1>
         </div>
-        <div class="game-area">
+        <main>
+            <div id="game-area" class="hidden">
+                <div class="choice-area">
+                    <div class="container">
+                        <div class="row rps">
+                            <div class="choice col"><button id="rock"><i
+                                        class="fa-solid fa-hand-back-fist"></i></button></div>
+                            <div class="choice col"><button id="paper"><i class="fa-solid fa-hand"></i></button></div>
+                            <div class="choice col"><button id="scissors"><i
+                                        class="fa-solid fa-hand-scissors"></i></button></div>
+                            <div class="row ls">
+                                <div class="empty col-3"></div>
+                                <div class="choice col-2"><button id="lizard"><i
+                                            class="fa-solid fa-hand-lizard"></i></button></div>
+                                <div class="empty col"></div>
+                                <div class="choice col-2"><button id="spock"><i
+                                            class="fa-solid fa-hand-spock"></i></button></div>
+                                <div class="empty col-3"></div>
+                            </div>
 
-            <div class="choice-area">
-                <div class="container">
-                    <div class="row rps">
-                        <div class="choice col"><button id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-                        </div>
-                        <div class="choice col"><button id="paper"><i class="fa-solid fa-hand"></i></button></div>
-                        <div class="choice col"><button id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+
+                            <div class="score-area">
+                                <div class="round-result">
+                                    <p id="user-choice"></p>
+                                    <p id="computer-choice"></p>
+                                    <p id="result-message"></p>
+                                    <p id="win-lose-message"></p>
+                                </div>
+
+                                <div class="score-track">
+                                    <p class="scores">Player <span id="player-win">0</span></p>
+                                    <p class="scores">Computer <span id="computer-win">0</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row ls">
-                        <div class="empty col-3"></div>
-                        <div class="choice col-2"><button id="lizard"><i class="fa-solid fa-hand-lizard"></i></button>
-                        </div>
-                        <div class="empty col"></div>
-                        <div class="choice col-2"><button id="spock"><i class="fa-solid fa-hand-spock"></i></button>
-                        </div>
-                        <div class="empty col-3"></div>
-                    </div>
-            <div class="choice-area">
-                <div class="choice" id="rock"><button><i class="fa-solid fa-hand-back-fist"></i></button>
-                </div>
-                <div class="choice" id="paper"><button><i class="fa-solid fa-hand"></i></button></div>
-                <div class="choice" id="scissors"><button><i class="fa-solid fa-hand-scissors"></i></button>
-                </div>
-                <div class="choice" id="lizard"><button><i class="fa-solid fa-hand-lizard"></i></button></div>
-                <div class="choice" id="spock"><button><i class="fa-solid fa-hand-spock"></i></button></div>
-            </div>
-
-            <div class="score-area">
-                <div class="round-result">
-                    <p id="user-choice"></p>
-                    <p id="computer-choice"></p>
-                    <p id="result-message"></p>
-                    <p id="win-lose-message"></p>
-                </div>
-
-                <div class="score-track">
-                    <p class="scores">Player <span id="player-win">0</span></p>
-                    <p class="scores">Computer <span id="computer-win">0</span></p>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer class="footer" style="border: 5px solid black;">
-        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/home?lang=en" class="fa fa-twitter"></a>
-        <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
-        <p>Share link and play with friends!</p>
-    </footer>
-    <script src="https://kit.fontawesome.com/b562b51125.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+        </main>
+        <footer class="footer" style="border: 5px solid black;">
+            <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/home?lang=en" class="fa fa-twitter"></a>
+            <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
+            <p>Share link and play with friends!</p>
+        </footer>
+        <script src="https://kit.fontawesome.com/b562b51125.js" crossorigin="anonymous"></script>
+        <script src="assets/js/script.js"></script>
 </body>
 
 

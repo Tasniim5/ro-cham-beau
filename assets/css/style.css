@@ -28,6 +28,7 @@
     display: inline-block;
 
 }
+
 button {
     text-decoration: none;
     color: black;
@@ -48,8 +49,10 @@ button {
     margin-bottom: 40px;
     margin-top: 40px;
 }
+
 h2 {
-   margin-bottom: 30px; /* Add space below the h2 */
+    margin-bottom: 30px;
+    /* Add space below the h2 */
 }
 
 .option1 {
@@ -64,9 +67,10 @@ h2 {
 
 .hero {
     text-align: center;
-    
+
 }
-.hero img{
+
+.hero img {
     max-width: 100%;
     height: auto;
 }
@@ -198,7 +202,7 @@ footer a {
     padding: 0;
 }
 
-header > h1 {
+header>h1 {
     text-align: center;
 }
 
@@ -220,7 +224,7 @@ header > h1 {
 }
 
 .choice {
-    display:inline-block;
+    display: inline-block;
 }
 
 .score-area {
@@ -234,4 +238,5 @@ header > h1 {
 .choice button {
     padding: 10px 30px;
 
-    font-size: 2rem;}
+    font-size: 2rem;
+}
