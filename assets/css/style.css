@@ -79,7 +79,7 @@ h2 {
 /*footer */
 footer {
     overflow: hidden;
-    color: #f2f2f2;
+    color: #B8B8B8;
     padding: 14px 16px;
     font-size: 20px;
 
@@ -193,6 +193,15 @@ footer a {
         max-height: 550px;
         margin-top: 50px;
     }
+
+    @media (max-width: 320px) {
+        .topnav { max-width: 100%;
+        max-height: 550px;
+        margin-top: 50px;}
+    
+        .search { max-width: 100%;
+            max-height: 550px;
+            margin-top: 50px;}}
 }
 
 /*Rules Page End*/
