@@ -356,4 +356,5 @@ function tryAgain() {
     toggleArea.classList.remove("hidden");
 
     selectGameText.innerHTML = `<h1>Please select a game type to get started!</h1>`;
+    vicDefMessage.innerText = "";
 }
