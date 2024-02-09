@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header>h1 {
+    text-align: center;
+}
+
+.toggle-area {
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.game-toggle {
+    display: inline-block;
+}
+
+#game-area {
+    margin: auto;
+}
+
+.choice-area {
+    background-color: aliceblue;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 60%;
+}
+
+.choice {
+    display: inline-block;
+}
+
+.score-area {
+    text-align: center;
+}
+
+.choice button {
+    padding: 10px 30px;
+    font-size: 2rem;
+}
+
+/* rock paper scissors row */
+.rps {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+/* lizard spock row*/
+.ls {
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#select-game {
+    text-align: center;
+}
+
+#victory-defeat-message {
+    text-align: center;
+    color: black;
+}
+
+/* .win {
+    color: green;
+}
+
+.lose {
+    color: red;
+} */

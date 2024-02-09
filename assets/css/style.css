@@ -192,3 +192,46 @@ footer a {
 }
 
 /*Rules Page End*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+.toggle-area {
+    margin: auto;
+    text-align: center;
+}
+
+.game-toggle {
+    display: inline-block;
+}
+
+.game-area {
+    margin: auto auto;
+}
+
+.choice-area {
+    text-align: center;
+}
+
+.choice {
+    display:inline-block;
+}
+
+.score-area {
+    text-align: center;
+}
+
+.choice {
+    margin: 10px;
+}
+
+.choice button {
+    padding: 10px 30px;
+
+    font-size: 2rem;}
